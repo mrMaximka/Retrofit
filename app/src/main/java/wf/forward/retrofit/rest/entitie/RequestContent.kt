@@ -3,10 +3,12 @@ package wf.forward.retrofit.rest.entitie
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class RequestRestModel (
+data class RequestContent (
+    @Expose
+    @SerializedName("type")
+    val type: String,
 
     @Expose
-    @SerializedName("items")
-    val array: List<RequestElement>?
-
+    @SerializedName("content")
+    val content: String
 )
